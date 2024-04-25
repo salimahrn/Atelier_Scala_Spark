@@ -1,6 +1,6 @@
 # Cours sur Spark
 
-Vous trouverez ici toutes les ressources pour la partie travaux pratiques du cours sur Spark donné à Télécom pour le Mastère Spécialisé Big Data.
+Vous trouverez ici toutes les ressources pour la partie Atelier du cours sur Scala Spark.
 
 Il y a 3 fichiers de TP:
 - [TP_1_spark_shell_et_word_count.md](TP_1_spark_shell_et_word_count.md)

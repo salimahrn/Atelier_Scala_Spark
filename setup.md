@@ -160,7 +160,7 @@ tar -xvzf spark-2.3.4-bin-hadoop2.7.tgz
 
 Option 2 : Installation manuelle
 
-Aller sur http://spark.apache.org/downloads.html puis :
+Aller sur [http://spark.apache.org/downloads.html](https://archive.apache.org/dist/spark/spark-2.3.4/) puis :
 - Spark release : 2.3.4
 - Package type : pre-built for apache hadoop 2.7 and later
 - cliquer sur le lien : spark-2.3.4-bin-hadoop2.7.tgz

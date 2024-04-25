@@ -106,7 +106,7 @@ Dans le spark-shell, un SparkContext est automatiquement créé pour vous et est
 
 Chargez le fichier `README.md`, qui se trouve dans votre dossier Spark, dans un RDD (le chemin vers le fichier sera très probablement différent du mien, utilisez le bon) :
 ```scala
-scala> val rdd = sc.textFile("/Users/flo/Documents/packages/spark-2.3.4-bin-hadoop2.7/README.md")
+scala> val rdd = sc.textFile("CHEMIN_VERS_SPARK/spark-2.3.4-bin-hadoop2.7/README.md")
 ```
 
 Affichez les 5 premières lignes du fichier :
@@ -186,7 +186,7 @@ La ligne `.reduceByKey((i, j) => i + j)` (notez l'utilisation du mot "Key" qui f
 Pour info, vous pouvez obtenir le type d'un objet en tapant simplement le nom de l'objet dans le shell :
 ```scala
 scala> rdd
-res15: org.apache.spark.rdd.RDD[String] = /Users/flo/Documents/packages/spark-2.3.4-bin-hadoop2.7/README.md MapPartitionsRDD[1] at textFile at <console>:24
+res15: org.apache.spark.rdd.RDD[String] = CHEMIN_VERS_SPARK/spark-2.3.4-bin-hadoop2.7/README.md MapPartitionsRDD[1] at textFile at <console>:24
 
 scala> flattenedRdd
 res16: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[6] at flatMap at <console>:26
@@ -253,7 +253,7 @@ Pour rappel, on doit passer par un *SparkSession* pour pouvoir utiliser des Data
 
 Lecture du fichier et affichage des 5 premières lignes :
 ```scala
-scala> val df = spark.read.text("/Users/flo/Documents/packages/spark-2.3.4-bin-hadoop2.7/README.md")
+scala> val df = spark.read.text("CHEMIN_VERS_SPARK/spark-2.3.4-bin-hadoop2.7/README.md")
 
 scala> df.show(5)
 +--------------------+
@@ -340,7 +340,7 @@ Vous retrouverez toutes les fonctions d'agrégation disponibles dans la partie *
 
 Killez le spark-shell puis le relancer. Tapez
 ```scala
-val rdd = sc.textFile("/Users/flo/Documents/packages/spark-2.3.4-bin-hadoop2.7/README.md").flatMap(line => line.split(" "))
+val rdd = sc.textFile("CHEMIN_VERS_SPARK/spark-2.3.4-bin-hadoop2.7/README.md").flatMap(line => line.split(" "))
 
 rdd.map(word => (word, 1)).reduceByKey((i, j) => i + j).collect.foreach(println)
 ```

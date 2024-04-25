@@ -328,7 +328,7 @@ sbt assembly
 
 L’adresse du jar est donnée vers la fin du script :
 ```
-[info] Packaging /Users/flo/Documents/github/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
+[info] Packaging /CHEMIN_DU_PROJET/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
 ```
 
 ### Démarrer un cluster Spark local (le driver et le worker seront sur la même machine)
@@ -366,7 +366,7 @@ cd spark-2.3.4-bin-hadoop2.7/bin # !!!! Attention c’est bien "bin" maintenant
 --executor-memory 4G \
 --class paristech.Job \
 --master spark://$(hostname -i):7077 \
-/Users/flo/Documents/github/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
+/CHEMIN_DU_PROJET/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
 ```
 
 NB : remplacer le chemin vers le jar, remplacer le nom de la classe s'il a été modifié par rapport au template donné en début de TP.
@@ -382,5 +382,5 @@ Un exemple de commande pour, en plus, sauvegarder les event logs et pouvoir lire
 --num-executors 2 \
 --packages "com.amazonaws:aws-java-sdk:1.7.4,org.apache.hadoop:hadoop-aws:2.7.1" \
 --master spark://$(hostname -i):7077 \
-/Users/flo/Documents/github/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
+/CHEMIN_DU_PROJET/spark_project_kickstarter_2019_2020/target/scala-2.11/spark_project_kickstarter_2019_2020-assembly-1.0.jar
 ```
